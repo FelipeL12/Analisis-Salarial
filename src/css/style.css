@@ -1,0 +1,319 @@
+/* GLOBAL */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* COLORS */
+
+    --white: #ffffff;
+    --black: #04080c;
+    --primary: #edf2f4;
+    --secondary: #8d99ae;
+
+    /* FONTS SIZE */
+
+    --font_lg: 2.5rem;
+    --font_md: 2rem;
+    --font_sm: 1.5rem
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    background: var(--primary);
+}
+
+
+/* UTILITES */
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.inactive {
+    display: none;
+}
+
+
+/* HEADER */
+
+.header {
+    /* width: 100%; */
+    position: relative;
+    padding: 3rem 0.5rem 2rem 0.5rem;
+}
+
+.navbar {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.logo_container {
+    text-align: center;
+    padding: 0 5rem 0 5rem;
+    background-image: url(../../assets/images/logo_empresa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 8rem;
+    margin: 0 auto;
+}
+
+
+/* MENU */
+
+.menu_container {
+    padding-top: 0.4rem;
+    margin-left: 0.2rem;
+    cursor: pointer;
+}
+
+.menu_container img {
+    width: 3rem;
+}
+
+
+/* COLLAPSE MENU */
+
+.menu_drop-down {
+    position: absolute;
+    background: var(--primary);
+    top: calc(0% + 10rem);
+    left: calc(0% - 1rem);
+    border-bottom-right-radius: 0.5rem;
+    border: none;
+}
+
+.menu_drop-down ul {
+    list-style: none;
+}
+
+.menu_drop-down li {
+    padding: 1rem 1.5rem 1.2rem 3rem;
+}
+
+.menu_drop-down a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: var(--font_sm);
+    font-weight: 700;
+}
+
+
+/* MAIN CONTENT */
+
+.analysis_container {
+    width: 100%;
+    display: grid;
+    grid: 1fr / 1fr;
+}
+
+
+/* PERNSON ANALYSIS */
+
+.person_analysis_container {
+    background-image: url(../../assets/images/persona-background-medium.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    width: 100%;
+}
+
+.person_analysis_container a {
+    text-decoration: none;
+}
+
+.person_analysis_content {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.person_analysis_container :hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.person_analysis_content h2 {
+    font-size: var(--font_md);
+    font-weight: 700;
+    color: var(--white);
+}
+
+
+/* COMPANY ANALYSIS */
+
+.company_analysis_container {
+    background-image: url(../../assets/images/empresa-background-medium.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    width: 100%;
+}
+
+.company_analysis_container a {
+    text-decoration: none;
+}
+
+.company_analysis_content {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.company_analysis_container :hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.company_analysis_content h2 {
+    font-size: var(--font_md);
+    font-weight: 700;
+    color: var(--white);
+}
+
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_social_media {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+/* MEDIA */
+
+@media (min-width: 750px) {
+
+
+    /* HEADER */
+
+    .logo_container {
+        background-image: url(../../assets/images/logo_empresa_iniciales.png);
+        height: 8rem;
+        width: 8rem;
+    }
+
+
+    /* COLLAPSE MENU */
+
+    .menu_drop-down {
+        left: calc(0% -10rem);
+    }
+
+}
+
+@media (min-width: 920px) {
+
+
+    /* HEADER */
+
+    .navbar {
+        justify-content: space-evenly;
+    }
+
+    .logo_container {
+        background-image: url(../../assets/images/logo_empresa_nombres.png);
+        height: 13rem;
+        width: 21rem;
+    }
+
+
+    /* MENU */
+
+    .menu_container {
+        padding-top: 0.4rem;
+        margin-left: 2.2rem;
+        cursor: pointer;
+    }
+
+
+    /* MAIN CONTENT */
+
+    .analysis_container {
+        grid: 1fr /1fr 1fr;
+    }
+
+
+    /* PERNSON ANALYSIS */
+
+    .person_analysis_container {
+        height: 70rem;
+    }
+
+
+    /* COMPANY ANALYSIS */
+
+    .company_analysis_container {
+        height: 70rem;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding-top: 1.8rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .footer_social_media {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    /* HEADER */
+
+    .navbar {
+        justify-content: start;
+    }
+
+
+    /* PERNSON ANALYSIS */
+
+    .person_analysis_container {
+        height: 79rem;
+    }
+
+
+    /* COMPANY ANALYSIS */
+
+    .company_analysis_container {
+        height: 79rem;
+    }
+
+}
