@@ -11,7 +11,7 @@ function toggleCollapseMenu() {
 const who_are_us = document.querySelector(".who_are_us")
 const info_who_are_us = document.getElementById("info_who_are_us");
 
-who_are_us.addEventListener("click", showInfoWhoAreUs);
+who_are_us.addEventListener("click", toggleShowInfoWhoAreUs);
 
 function toggleShowInfoWhoAreUs() {
     info_who_are_us.classList.toggle("inactive");
