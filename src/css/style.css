@@ -6,18 +6,17 @@
 }
 
 :root {
-    /* COLORS */
 
+    /* COLORS */
     --white: #ffffff;
     --black: #04080c;
     --primary: #edf2f4;
     --secondary: #8d99ae;
 
     /* FONTS SIZE */
-
-    --font_lg: 2.5rem;
-    --font_md: 2rem;
-    --font_sm: 1.5rem
+    --font_lg: 3rem;
+    --font_md: 2.5rem;
+    --font_sm: 2rem
 }
 
 html {
@@ -60,7 +59,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .logo_container {
@@ -85,6 +83,8 @@ body {
 
 .menu_container img {
     width: 3rem;
+    margin-left: 1rem;
+    position: absolute;
 }
 
 
@@ -111,11 +111,51 @@ body {
     color: var(--black);
     text-decoration: none;
     font-size: var(--font_sm);
-    font-weight: 700;
+    font-weight: 500;
 }
 
 
 /* MAIN CONTENT */
+
+/* INFO_CONTAINER  */
+
+.info_container {
+    /* width: 100%; */
+    padding: 2rem 2rem 2rem 2rem;
+    background: var(--black);
+}
+
+.who_are_us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.who_are_us :hover {
+    cursor: pointer;
+}
+
+.who_are_us h2:nth-child(1):hover {
+    color: var(--secondary);
+}
+
+.who_are_us h2 {
+    font-size: var(--font_md);
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem;
+    color: var(--white);
+}
+
+.who_are_us p {
+    font-size: var(--font_sm);
+    font-weight: 300;
+    text-align: justify;
+    color: var(--white);
+}
+
+/* ANALYSIS CONTAINER */
 
 .analysis_container {
     width: 100%;
@@ -236,14 +276,13 @@ body {
 
 }
 
+
 @media (min-width: 920px) {
 
 
     /* HEADER */
 
-    .navbar {
-        justify-content: space-evenly;
-    }
+
 
     .logo_container {
         background-image: url(../../assets/images/logo_empresa_nombres.png);
@@ -261,7 +300,29 @@ body {
     }
 
 
+    /* COLLAPSE MENU */
+
+    .menu_drop-down {
+        top: calc(0% + 13rem);
+    }
+
+
     /* MAIN CONTENT */
+
+    /* INFO_CONTAINER  */
+
+    .who_are_us h2 {
+        font-size: var(--font_lg);
+    }
+
+    .who_are_us p {
+        padding-right: 10rem;
+        padding-left: 10rem;
+        margin: 0 auto;
+    }
+
+
+    /* ANALYSIS CONTAINER */
 
     .analysis_container {
         grid: 1fr /1fr 1fr;
@@ -274,11 +335,19 @@ body {
         height: 70rem;
     }
 
+    .person_analysis_content h2 {
+        font-size: var(--font_lg);
+    }
+
 
     /* COMPANY ANALYSIS */
 
     .company_analysis_container {
         height: 70rem;
+    }
+
+    .company_analysis_content h2 {
+        font-size: var(--font_lg);
     }
 
 
@@ -294,14 +363,22 @@ body {
     }
 }
 
+
 @media (min-width: 1400px) {
 
-    /* HEADER */
+    /* MAIN CONTENT */
 
-    .navbar {
-        justify-content: start;
+    /* INFO_CONTAINER  */
+
+    .who_are_us p {
+        padding-right: 40rem;
+        padding-left: 40rem;
+        font-size: var(--font_sm);
+        font-weight: 500;
     }
 
+
+    /* ANALYSIS CONTAINER */
 
     /* PERNSON ANALYSIS */
 
@@ -315,5 +392,4 @@ body {
     .company_analysis_container {
         height: 79rem;
     }
-
 }
